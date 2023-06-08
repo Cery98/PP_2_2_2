@@ -27,8 +27,8 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<Car> countCars(List<Car> carList, int count) {
+    public List<Car> countCars(List<Car> carList,int count) {
 
-        return carList.subList(0, count);
+        return carList.subList(0, Math.min(count, carList.size()));
     }
 }
